@@ -17,6 +17,9 @@ public class Folder {
     private String name;
 
 
+
+    @ManyToMany(mappedBy = "parentFolders")
+    private List<FileMetadata> fileMetadataList;
     @ManyToMany
     @Column(nullable = true)
     private List<Folder> childFolders;
@@ -41,6 +44,13 @@ public class Folder {
 
     public Folder(){
 
+    }
+    public List<FileMetadata> getFileMetadataList() {
+        return fileMetadataList;
+    }
+
+    public void setFileMetadataList(List<FileMetadata> fileMetadataList) {
+        this.fileMetadataList = fileMetadataList;
     }
 
     public Folder(String name, List<Folder> childFolders) {

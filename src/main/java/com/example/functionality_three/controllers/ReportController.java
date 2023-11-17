@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
@@ -25,8 +26,11 @@ public class ReportController {
         reportService = new ReportService(metadataRepository, foldersRepository);
     }
     @GetMapping("/{reportType}")
-    public ResponseEntity<Map<String,String>> getReportFiles(@PathVariable String reportType){
-        return reportService.createReport(reportType);
+    public ResponseEntity<Map<String,String>> getReportFiles(@PathVariable String reportType, @RequestParam(required = false) Integer howmany){
+        if(howmany == null){
+            return reportService.createReport(reportType,1);
+        }
+        return reportService.createReport(reportType,howmany);
     }
 
 

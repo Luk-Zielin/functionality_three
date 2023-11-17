@@ -17,6 +17,9 @@ public class FileMetadata {
 
     @ManyToMany
     @Column(nullable = true)
+    @JoinTable(name = "filemetadata_parentfolders",
+    joinColumns = @JoinColumn(name = "filemetadata_id", referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "parentfolders_id", referencedColumnName = "id"))
     private List<Folder> parentFolders;
 
 
