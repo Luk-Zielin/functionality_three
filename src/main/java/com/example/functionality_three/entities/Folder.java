@@ -1,4 +1,4 @@
-package com.example.functionality_two.entities;
+package com.example.functionality_three.entities;
 
 
 import jakarta.persistence.*;

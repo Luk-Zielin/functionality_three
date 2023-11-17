@@ -1,10 +1,9 @@
-package com.example.functionality_two.entities;
+package com.example.functionality_three.entities;
 
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.util.List;
-import java.util.Optional;
 
 @Entity
 @EntityScan("com.example.model")

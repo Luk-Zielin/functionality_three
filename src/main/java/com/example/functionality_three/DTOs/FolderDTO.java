@@ -1,6 +1,4 @@
-package com.example.functionality_two.DTOs;
-
-import com.example.functionality_two.entities.Folder;
+package com.example.functionality_three.DTOs;
 
 import java.util.List;
 

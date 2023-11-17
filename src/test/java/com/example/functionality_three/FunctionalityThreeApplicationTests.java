@@ -1,10 +1,10 @@
-package com.example.functionality_two;
+package com.example.functionality_three;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FunctionalityOneApplicationTests {
+class FunctionalityThreeApplicationTests {
 
 	@Test
 	void contextLoads() {

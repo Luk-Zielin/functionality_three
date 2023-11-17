@@ -1,6 +1,6 @@
-package com.example.functionality_two.repositories;
+package com.example.functionality_three.repositories;
 
-import com.example.functionality_two.entities.FileMetadata;
+import com.example.functionality_three.entities.FileMetadata;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
